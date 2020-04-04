@@ -1,0 +1,22 @@
+.wrapper {
+  margin-top: 60px;
+  h1 {
+    margin-bottom: 40px;
+  }
+}
+
+.flex-space-evenly {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-display-end {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  margin-left: 30px;
+  label {
+    text-align: center;
+  }
+}

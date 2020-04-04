@@ -1,0 +1,37 @@
+<div class="container wrapper">
+  <% if @recette.photo.present? %>
+    <div class="header" style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('<%= cl_image_path @recette.photo.key, crop: :fill %>');">
+      <%#= cl_image_tag @recette.photo.key, height: 300, width: 400, crop: :fill %>
+      <h1><%= @recette.nom %></h1>
+      <%= link_to edit_recette_path(@recette), class: "edit-recette" do %>
+        <p>Editer <i class="fas fa-keyboard"></i></p>
+      <% end %>
+    </div>
+  <% else %>
+  <% end %>
+  <div class="row container wrapper">
+    <div class="col-xs-4">
+      <div class="ingredient">
+        <h2>Ingrédients <%= link_to new_recette_quantite_path(@recette) do %>
+          <i class="fas fa-plus-square"></i>
+        <% end %></h2>
+        <% @recette.quantites.each do |quantite|%>
+          <p><%= quantite.ingredient.name %> — <%= quantite.description %>
+          <%= link_to quantite_path(quantite), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fas fa-trash-alt"></i>
+          <% end %></p>
+        <% end %>
+
+      </div>
+    </div>
+    <div class="col-xs-8">
+      <div class="contenu">
+        <h2>Description</h2>
+        <p><%= simple_format(@recette.description) %></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

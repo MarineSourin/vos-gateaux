@@ -1,0 +1,16 @@
+<div class="container wrapper">
+  <%= simple_form_for @recette do |f| %>
+    <%= f.input :nom, label: "Nom de la recette", class: "form" %>
+    <div class="flex-space-evenly">
+      <%= f.input :temps_preparation, label: "Temps de préparation (min)", collection: [*0, *10..90], class: "form" %>
+      <%= f.input :temps_cuisson, label: "Temps de cuisson (min)", collection: [*0, *10..90], class: "form" %>
+      <%= f.input :nombre_personne, label: "Pour combien de personnes ?", collection: 1..20, class: "form" %>
+    </div>
+
+    <%= f.input :difficulte, label: "Quelle est la difficulté de votre recette ?", as: :radio_buttons, collection: [['0', 'très facile'], ['1', 'facile'], ['2', 'moyen'], ['3', 'difficile']], label_method: :second, value_method: :first, class: "form" %>
+    <%= f.input :description, label: "Les étapes de la recette", class: "form" %>
+    <%= f.input :photo, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Ajouter une photo' %>
+    <br>
+    <%= f.submit "Ajouter cette recette", class: 'btn-ok' %>
+  <% end %>
+</div>
