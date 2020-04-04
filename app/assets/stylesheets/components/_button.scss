@@ -7,5 +7,19 @@
   &:hover {
     color: rgba(8, 164, 212, 1);
     background-color: white;
+    border: 1px solid rgba(8, 164, 212, 1);
+  }
+}
+
+.btn-no {
+  color: rgba(8, 164, 212, 1);
+  background-color: white;
+  border: 1px solid rgba(8, 164, 212, 1);
+  opacity: .8;
+  border-radius: 10px;
+  padding: 10px 30px;
+  &:hover {
+    color: white;
+    background-color: rgba(8, 164, 212, 1);
   }
 }

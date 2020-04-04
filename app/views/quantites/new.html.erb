@@ -1,14 +1,16 @@
 <div class="container wrapper">
   <%= simple_form_for [@recette, @quantite] do |f| %>
     <div class="row">
-      <%= f.association :ingredient, as: :string %>
+      <%= f.association :ingredient, label_method: :nom, label: "Ingrédient" %>
       <div class="flex-display-end">
         <%= f.input :dose, collection: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55], label: "Quantité" %>
-        <%= f.input :unite_mesure, collection: ["grammes", "centilitres", "litres"], label: false %>
+        <%= f.input :unite_mesure, collection: ["gramme(s)", "centilitre(s)", "litre(s)"], label: false %>
       </div>
     </div>
-    <%= f.submit "Ajouter " %>
+    <div class="flex-display-end">
+      <%= f.submit "Ajouter", class: "btn-ok" %>
+      <%= link_to "Annuler", recette_path(@recette), class: "btn-no" %>
+    </div>
   <% end %>
-  <p><%= link_to "Annuler", recette_path(@recette) %></p>
 </div>
 

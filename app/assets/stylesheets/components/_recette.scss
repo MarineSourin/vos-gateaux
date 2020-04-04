@@ -41,6 +41,14 @@
       }
     }
   }
+  .fa-trash-alt {
+    text-decoration: none;
+    color: #707070;
+    margin-left: 40px;
+    &:hover {
+      color: black;
+    }
+  }
 }
 
 .contenu {
@@ -51,5 +59,89 @@
   h2 {
     font-weight: bold;
     border-bottom: 1px solid black;
+  }
+}
+
+.infos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  .difficulte {
+    text-align: center;
+    p { margin: 0; }
+  }
+  .fa-circle {
+    color: #ebe5e3;
+    &.colored {
+      color: rgba(8, 164, 212, 1);
+    }
+  }
+}
+.infos-temps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+@media(max-width: 600px) {
+  .header {
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    h1 {
+      font-weight: bold;
+      text-shadow: 2px 2px #F4F4F4;
+    }
+    p {
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+    }
+  }
+  .ingredient {
+    width: 300px;
+    h2 {
+      font-weight: bold;
+      border-bottom: 1px solid black;
+      margin-right: 10px;
+      .fa-plus-square {
+        font-size: 20px;
+        text-decoration: none;
+        color: #707070;
+        &:hover {
+          color: black;
+        }
+      }
+    }
+    .fa-trash-alt {
+      text-decoration: none;
+      color: #707070;
+      margin-left: 40px;
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  .contenu {
+    margin-top: 30px;
+    width: 300px;
+    padding-left: 0;
+    border-left: none;
+    text-align: justify;
+    h2 {
+      font-weight: bold;
+      border-bottom: 1px solid black;
+    }
   }
 }

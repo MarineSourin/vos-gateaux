@@ -9,7 +9,8 @@
 
     <%= f.input :difficulte, label: "Quelle est la difficulté de votre recette ?", as: :radio_buttons, collection: [['0', 'très facile'], ['1', 'facile'], ['2', 'moyen'], ['3', 'difficile']], label_method: :second, value_method: :first, class: "form" %>
     <%= f.input :description, label: "Les étapes de la recette", class: "form" %>
-    <%= f.input :photo, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: '📷 Ajouter une photo' %>
+    <%= f.input :photo, as: :file, input_html: { class: 'd-none', id: 'photo-input' }, label_html: { class: 'upload-photo'}, label: '📷 Ajouter une photo' %>
+    <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
     <br>
     <%= f.submit "Ajouter cette recette", class: 'btn-ok' %>
   <% end %>

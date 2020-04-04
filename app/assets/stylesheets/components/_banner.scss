@@ -36,3 +36,19 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+
+@media(max-width: 600px) {
+  .banner {
+    width: 100%;
+  }
+  .wave {
+    width: 100%;
+  }
+  .banner h1 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .banner p {
+    font-size: 15px;
+  }
+}

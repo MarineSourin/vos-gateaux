@@ -3,24 +3,35 @@ form {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  abbr[title] { display: none;}
   .form-group {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     #recette_nom {
       width: 400px;
+      border: 1px solid #C8C8C8 !important;
     }
     textarea.form-control {
       width: 400px;
+      border: 1px solid #C8C8C8 !important;
     }
     .form-control.select {
       width: 50px;
+      border: 1px solid #C8C8C8 !important;
     }
     .form-control {
       width: 200px;
       border: none;
       box-shadow: 2px 2px 2px rgba(153, 147, 147, 0.5);
+    }
+    #quantite_ingredient_id {
+      width: 100%;
+    }
+    #quantite_unite_mesure {
+      width: 100%;
     }
   }
   .form-group.select.required.recette_temps_cuisson {
@@ -33,6 +44,58 @@ form {
     }
     .form-check {
       text-align: center;
+      label {
+        color: #495057 !important;
+      }
+    }
+  }
+}
+
+@media(max-width: 600px) {
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .form-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 12px;
+      text-align: center;
+      #recette_nom {
+        width: 300px;
+      }
+      textarea.form-control {
+        width: 300px;
+      }
+      .form-control.select {
+        width: 50px;
+      }
+      .form-control {
+        width: 200px;
+        border: none;
+        box-shadow: 2px 2px 2px rgba(153, 147, 147, 0.5);
+      }
+      #quantite_ingredient_id {
+        width: 100%;
+      }
+      #quantite_unite_mesure {
+        width: 100%;
+      }
+    }
+    .form-group.select.required.recette_temps_cuisson {
+      margin-left: 40px;
+      margin-right: 40px;
+    }
+    fieldset.form-group {
+      legend {
+        text-align: center;
+      }
+      .form-check {
+        text-align: center;
+      }
     }
   }
 }
