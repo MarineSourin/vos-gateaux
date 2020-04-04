@@ -1,0 +1,7 @@
+<div class="container search">
+  <%= simple_form_for :search, url: recettes_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+    <%= f.input :nom, input_html: {value: ""}, label: false %>
+    <br>
+    <%= f.submit "Rechercher", class: "btn-ok" %>
+  <% end %>
+</div>

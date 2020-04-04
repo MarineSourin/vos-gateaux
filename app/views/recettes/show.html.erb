@@ -11,12 +11,16 @@
   <% end %>
   <div class="container wrapper">
     <div class="infos-temps">
-      <p>Temps total: <%= @temps_total %> minutes</p>
-      <p>Temps de préparation : <%= @recette.temps_preparation %> minutes</p>
-      <p>Temps de cuisson : <%= @recette.temps_cuisson %> minutes</p>
+      <p>Temps total: <span class="bleu"><%= @temps_total %></span> minutes</p>
+      <p>Temps de préparation : <span class="bleu"><%= @recette.temps_preparation %></span> minutes</p>
+      <% if @recette.temps_cuisson = 0%>
+        <p>Temps de cuisson : pas de cuisson</p>
+      <% else %>
+        <p>Temps de cuisson : <span class="bleu"><%= @recette.temps_cuisson %></span> minutes</p>
+      <% end %>
     </div>
     <div class="infos">
-      <p>Pour <%= @recette.nombre_personne%> personnes</p>
+      <p>Pour <span class="bleu"><%= @recette.nombre_personne%></span> personnes</p>
       <div class="difficulte">
         <p><%= @difficulte %></p>
         <% if @difficulte = "Très facile" %>
@@ -45,7 +49,13 @@
             <i class="fas fa-plus-square"></i>
           <% end %></h2>
           <% @recette.quantites.each do |quantite|%>
-            <p><%= quantite.ingredient.nom %> — <%= quantite.dose %> <%= quantite.unite_mesure %>
+            <% if quantite.dose == 1 && quantite.unite_mesure != "pas d'unité de mesure" %>
+              <p><%= quantite.ingredient.nom %> — <%= quantite.dose %> <%= quantite.unite_mesure %>
+            <% elsif quantite.unite_mesure == "pas d'unité de mesure" %>
+              <p><%= quantite.ingredient.nom %> — <%= quantite.dose %>
+            <% else %>
+              <p><%= quantite.ingredient.nom %> — <%= quantite.dose %> <%= quantite.unite_mesure %>s
+            <% end %>
             <%= link_to quantite_path(quantite), method: :delete, data: { confirm: "Êtes-vous sûr de vouloir supprimer cet ingrédient ?" } do %>
                 <i class="fas fa-trash-alt"></i>
             <% end %></p>
