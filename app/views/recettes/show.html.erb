@@ -16,6 +16,11 @@
       <% end %>
     </div>
   <% end %>
+  <% if @recette.auteur.present? %>
+    <div class="container auteur">
+      <p>Ajoutée par <%= @recette.auteur %></p>
+    </div>
+  <% end %>
   <div class="container wrapper">
     <div class="infos-temps">
       <p>Temps total: <span class="bleu"><%= @temps_total %></span> minutes</p>

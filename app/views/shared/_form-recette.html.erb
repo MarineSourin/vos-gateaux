@@ -1,5 +1,8 @@
 <div class="container wrapper">
+  <h4 class="text-center">Il s'agit de la première étape pour créer une recette. <br> L'ajout des ingrédients se fera dans un second temps.</h4>
+  <br>
   <%= simple_form_for @recette do |f| %>
+    <%= f.input :auteur, label: "Qui ajoute cette recette ? 👩‍🍳👨‍🍳", class: "form" %>
     <%= f.input :nom, label: "Nom de la recette", class: "form" %>
     <div class="flex-space-evenly">
       <%= f.input :temps_preparation, label: "Temps de préparation (min)", collection: [*0, *10..90], class: "form" %>
