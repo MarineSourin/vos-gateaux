@@ -3,7 +3,7 @@
     <div class="row">
       <%= f.association :ingredient, label_method: :nom, label: "Ingrédient" %>
       <div class="flex-display-end">
-        <%= f.input :dose, collection: [1, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55], label: "Quantité" %>
+        <%= f.input :dose, collection: @temps, label: "Quantité" %>
         <%= f.input :unite_mesure, collection: ["gramme", "centilitre", "litre", "pincée", "pas d'unité de mesure"], label: false %>
       </div>
     </div>
@@ -13,4 +13,6 @@
     </div>
   <% end %>
 </div>
+
+
 
