@@ -37,7 +37,7 @@
   flex-direction: row;
   width: 100%;
   a {
-    color: white;
+    color: black;
   }
 }
 
@@ -91,6 +91,9 @@
     z-index: 1;
     width: 200px;
     height: 150px;
+    a {
+      color: white;
+    }
   }
 
   .navbar-lewagon .navbar-collapse {
