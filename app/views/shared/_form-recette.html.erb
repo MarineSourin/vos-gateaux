@@ -3,6 +3,14 @@
   <br>
   <%= simple_form_for @recette do |f| %>
     <%= f.input :auteur, label: "Qui ajoute cette recette ? 👩‍🍳👨‍🍳", class: "form" %>
+    <%= f.input :team, label: "De quelle équipe fais-tu partie ? 👯‍♀️👯",
+                      collection: ["AVOCADO", "BANANA", "BLUE", "BUBBLE GUM",
+                                  "CARAMEL", "CHOCOLAT", "CITRON VERT",
+                                  "DISCO CAKE", "FIGUE", "GRENADE", "ISPAHAN",
+                                  "LEMON", "MERINGUE", "MINT", "MYRTILLES",
+                                  "ORANGE", "PINEAPPLE", "PINK", "PISTACHE",
+                                  "RAISIN", "SUCRE GLACE", "VANILLA"], as: :select %>
+
     <%= f.input :nom, label: "Nom de la recette", class: "form" %>
     <div class="flex-space-evenly">
       <%= f.input :temps_preparation, label: "Temps de préparation (min)", collection: [*0, *10..90], class: "form" %>

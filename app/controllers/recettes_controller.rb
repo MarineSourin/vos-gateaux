@@ -20,6 +20,10 @@ class RecettesController < ApplicationController
   end
 
   def new
+    @teams = ["AVOCADO", "BANANA", "BLUE", "BUBBLE GUM", "CARAMEL",
+    "CHOCOLAT", "CITRON VERT", "DISCO CAKE", "FIGUE", "GRENADE",
+    "ISPAHAN", "LEMON", "MERINGUE", "MINT", "MYRTILLES", "ORANGE",
+    "PINEAPPLE", "PINK", "PISTACHE", "RAISIN", "SUCRE GLACE", "VANILLA"]
     @recette = Recette.new
   end
 
@@ -50,6 +54,6 @@ class RecettesController < ApplicationController
   def recette_params
     params.require(:recette).permit(:nom, :photo, :description,
                                     :temps_preparation, :temps_cuisson,
-                                    :nombre_personne, :difficulte, :auteur)
+                                    :nombre_personne, :difficulte, :auteur, :team)
   end
 end
