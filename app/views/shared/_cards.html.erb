@@ -1,23 +1,29 @@
 <div class="container container-card">
-  <div id="cards" class="cards">
-    <% @recettes.each do |recette| %>
-      <% if recette.photo.present? %>
-        <%= link_to recette_path(recette) do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path recette.photo.key, height: 300, width: 400, crop: :fill %>');">
-            <div class="card-description" >
-              <h2><%= recette.nom %> </h2>
+  <% if @recettes.present? %>
+    <div id="cards" class="cards">
+      <% @recettes.each do |recette| %>
+        <% if recette.photo.present? %>
+          <%= link_to recette_path(recette) do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path recette.photo.key, height: 300, width: 400, crop: :fill %>');">
+              <div class="card-description" >
+                <h2><%= recette.nom %> </h2>
+              </div>
             </div>
-          </div>
-        <% end %>
-      <% else %>
-        <%= link_to recette_path(recette) do %>
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://res.cloudinary.com/marinesourin/image/upload/v1550239348/recette_by_default.jpg');">
-            <div class="card-description" >
-              <h2><%= recette.name %> </h2>
+          <% end %>
+        <% else %>
+          <%= link_to recette_path(recette) do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://res.cloudinary.com/dh7kybknc/image/upload/v1586045567/default_yjmc36.jpg');">
+              <div class="card-description" >
+                <h2><%= recette.nom %> </h2>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
       <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% else %>
+    <div class="container wrapper">
+      <h3>Il n'y pas encore de recette</h3>
+    </div>
+  <% end %>
 </div>

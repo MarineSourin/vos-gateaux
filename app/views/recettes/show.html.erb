@@ -8,6 +8,13 @@
       <% end %>
     </div>
   <% else %>
+    <div class="header" style="background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('https://res.cloudinary.com/dh7kybknc/image/upload/v1586046184/default_2_kncvcv.jpg');">
+      <%#= cl_image_tag @recette.photo.key, height: 300, width: 400, crop: :fill %>
+      <h1><%= @recette.nom %></h1>
+      <%= link_to edit_recette_path(@recette), class: "edit-recette" do %>
+        <p>Editer <i class="fas fa-keyboard"></i></p>
+      <% end %>
+    </div>
   <% end %>
   <div class="container wrapper">
     <div class="infos-temps">
