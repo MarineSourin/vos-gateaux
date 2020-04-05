@@ -70,6 +70,9 @@ form {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    .row {
+      flex-direction: column;
+    }
     .form-group {
       display: flex;
       align-items: center;

@@ -124,7 +124,7 @@ span.bleu {
     }
   }
   .ingredient {
-    width: 300px;
+    width: fit-content;
     h2 {
       font-weight: bold;
       border-bottom: 1px solid black;
@@ -158,5 +158,9 @@ span.bleu {
       font-weight: bold;
       border-bottom: 1px solid black;
     }
+  }
+
+  .infos-temps {
+    flex-flow: column;
   }
 }
