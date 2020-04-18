@@ -4,14 +4,17 @@
   <%= simple_form_for @recette do |f| %>
     <%= f.input :auteur, label: "Qui ajoute cette recette ? 👩‍🍳👨‍🍳", class: "form" %>
     <%= f.input :team, label: "De quelle équipe fais-tu partie ? 👯‍♀️👯",
-                      collection: ["AVOCADO", "BANANA", "BARBE A PAPA", "BLUE",
-                        "BUBBLE GUM", "CANDY", "CANNELES", "CARAMEL", "CHOCOLAT",
-                        "CITRON VERT", "DISCO CAKE", "DRAGIBUS", "FIGUE",
-                        "FRAMBOISE", "GAUFRETTES", "GRENADE", "GUIMAUVE",
-                        "ISPAHAN", "LEMON", "MERINGUE", "MINT", "MYRTILLES",
-                        "NOUGAT", "ORANGE", "PASSION", "PAVOT", "PECHE", "PINEAPPLE",
-                        "PINK", "PISTACHE", "PIZZETTA", "RAISIN", "REGLISSE",
-                        "SUCRE GLACE", "TAGADA", "VANILLA"], as: :select %>
+                      collection: ["AVOCADO", "BANANA", "BARBE A PAPA", "BASILICO",
+                        "BLUE", "BRETZEL", "BUBBLE GUM", "CALISSON", "CANDY",
+                        "CANNELES", "CARAMEL", "CHOCOLAT", "CHOUQUETTES",
+                        "CITRON VERT", "COFFEE", "CUPCAKE", "DISCO CAKE",
+                        "DRAGIBUS", "FIGUE", "FRAMBOISE", "GAUFRETTES", "GRANNY",
+                        "GRENADE", "GUIMAUVE", "HONEY", "ISPAHAN", "LEMON", "MATCHA",
+                        "MERINGUE", "MILK", "MINT", "MYRTILLES", "NOUGAT", "ORANGE",
+                        "PASSION", "PAVOT", "PECHE", "PIMIENTOS", "PINEAPPLE", "PINK",
+                        "PISTACHE", "PIZZETTA", "POIRE", "PRALINES", "RAISIN",
+                        "REGLISSE", "ROMARIN", "SESAME", "SUCRE GLACE", "SUZETTE",
+                        "TAGADA", "TATIN", "VANILLA", "VIOLETTE", "YOGURT"], as: :select %>
 
     <%= f.input :nom, label: "Nom de la recette", class: "form" %>
     <div class="flex-space-evenly">
