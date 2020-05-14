@@ -4,22 +4,26 @@
   <%= simple_form_for @recette do |f| %>
     <%= f.input :auteur, label: "Qui ajoute cette recette ? 👩‍🍳👨‍🍳", class: "form" %>
     <%= f.input :team, label: "De quelle équipe fais-tu partie ? 👯‍♀️👯",
-                      collection: ["AMANDE", "AVOCADO", "BANANA", "BARBE A PAPA",
-                        "BASILICO", "BEIGNET", "BERLINGOT", "BLUE", "BRETZEL",
-                        "BRIOCHE", "BUBBLE GUM", "CALISSON", "CANDY", "CANNELES",
-                        "CARAMEL", "CHANTILLY", "CHEESE", "CHOCOLAT", "CHOUQUETTES",
-                        "CITRON VERT", "COCONUT", "COFFEE", "COOKIES", "CRAQUELIN",
-                        "CROISSANT", "CUPCAKE", "DISCO CAKE", "DRAGIBUS", "DULCE DE LECHE",
-                        "DUNE BLANCHE", "FIGUE", "FOUGASSE", "FRAMBOISE", "GAUFRETTES",
-                        "GRANNY", "GRENADE", "GUIMAUVE", "HONEY", "ISPAHAN", "LEMON",
-                        "LILAS", "LITCHIS", "LOLLIPOPS", "MACARONS", "MADELEINE", "MALABAR",
-                        "MATCHA", "MELON", "MERINGUE", "MERVEILLEUX", "MILK", "MINT",
-                        "MISTER FREEZE", "MYRTILLES", "NONNETTES", "NOUGAT", "ORANGE",
-                        "PASSION", "PAVOT", "PECHE", "PIMIENTOS", "PINEAPPLE", "PINK",
-                        "PISTACHE", "PIZZETTA", "POIRE", "PRALINES", "PRUNE", "RAISIN",
-                        "REGLISSE", "ROMARIN", "SCONES", "SESAME", "SUCRE GLACE",
-                        "SUZETTE", "TAGADA", "TATIN", "TOFFEE", "VANILLA", "VIOLETTE",
-                        "YOGURT"], as: :select %>
+                      collection: ["AMANDE", "AVOCADO", "BANANA", "BANOFFEE", "BARBE A PAPA",
+                                   "BASILICO", "BEIGNET", "BERLINGOT", "BLUE", "BRETZEL",
+                                   "BRIOCHE", "BROWNIE", "BUBBLE GUM", "CALISSON", "CANDY",
+                                   "CANNELES", "CARAMEL", "CHANTILLY", "CHEESE", "CHERRY",
+                                   "CHOCOLAT", "CHOUQUETTES", "CHURROS", "CITRON VERT",
+                                   "CLAFOUTIS", "COCONUT", "COFFEE", "COOKIES", "COQUILLAGES",
+                                   "CORNETTO", "CRAQUELIN", "CROISSANT", "CUPCAKE", "DISCO CAKE",
+                                   "DONUTS", "DRAGIBUS", "DULCE DE LECHE", "DUNE BLANCHE",
+                                   "FIGUE", "FOUGASSE", "FRAMBOISE", "GAUFRETTES", "GRANNY",
+                                   "GRENADE", "GROSEILLES", "GUIMAUVE", "HONEY", "ISPAHAN",
+                                   "KIWI", "LEMON", "LILAS", "LITCHIS", "LOLLIPOPS", "MACARONS",
+                                   "MADELEINE", "MALABAR", "MATCHA", "MELON", "MERINGUE",
+                                   "MERVEILLEUX", "MILK", "MINT", "MISTER FREEZE", "MUFFIN",
+                                   "MYRTILLES", "NONNETTES", "NOUGAT", "ORANGE", "PAMPLEMOUSSE",
+                                   "PAPAYE", "PASSION", "PAVOT", "PEANUTS", "PECHE", "PIECE MONTEE",
+                                   "PIMIENTOS", "PINEAPPLE", "PINK", "PISTACHE", "PIZZETTA",
+                                   "POIRE", "PRALINES", "PRUNE", "PUMPKIN", "QUERNON",
+                                   "RAISIN", "REGLISSE", "ROMARIN", "SCONES", "SESAME",
+                                   "SUCRE GLACE", "SUZETTE", "TAGADA", "TATIN", "TOFFEE",
+                                   "VANILLA", "VIOLETTE", "YOGURT"], as: :select %>
 
     <%= f.input :nom, label: "Nom de la recette", class: "form" %>
     <div class="flex-space-evenly">
